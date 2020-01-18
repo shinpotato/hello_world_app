@@ -9,13 +9,6 @@ class UsersController < ApplicationController
 
   end
 
-  private
-
-  def user_params
-    params.require(:user).permit(:name,:age)
-
-  end
-
   def index
     @users = User.all
   end
@@ -24,5 +17,14 @@ class UsersController < ApplicationController
     @hoge = "hogehoge"
 
   end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name,:age)
+
+  end
+
+
 
 end
